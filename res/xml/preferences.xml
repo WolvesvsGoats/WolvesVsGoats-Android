@@ -1,0 +1,48 @@
+<PreferenceScreen
+	xmlns:android="http://schemas.android.com/apk/res/android">
+	<CheckBoxPreference
+		android:title="Autofollow GPS location"
+		android:summary="If checked, will automatically center map on received GPS location"
+		android:key="KEY_AUTOFOLLOW_LOCATION"/>
+		
+	<EditTextPreference
+		android:key="KEY_LOCATION_UPDATE_TIME"
+		android:title="Set location update time"
+		android:summary="Click to set location update time, in seconds"
+		android:dialogTitle="Update Interval" 
+		android:defaultValue="5"/>
+
+	<EditTextPreference
+		android:key="KEY_LOCATION_UPDATE_DISTANCE"
+		android:title="Set minimum distance for location update"
+		android:summary="Click to set minimum distance interval for location change notifications, in meters"
+		android:dialogTitle="Update Distance" 
+		android:defaultValue="5"/>
+
+    <CheckBoxPreference
+        android:title="Keep screen on"
+        android:summary="If checked, will prevent screen from turning off"
+        android:key="KEY_SCREEN_ON"/>
+        
+    <PreferenceScreen
+        android:title="Configure maps"
+        android:summary="Add/Remove/Edit map sources"
+        android:key="KEY_CONFIGURE_MAPS">
+	    <EditTextPreference
+	        android:key="KEY_CACHE_PATH"
+	        android:title="Set tiles cache path"
+	        android:summary="Click to enter tiles local cache path"
+	        android:dialogTitle="Folder path" 
+	        android:defaultValue="/sdcard/mapsminus/osm/"/>
+	        
+        <EditTextPreference
+            android:key="KEY_TILE_POSTFIX"
+            android:title="Set tile file postfix"
+            android:summary="To avoid gallery application indexing"
+            android:dialogTitle="Postfix" 
+            android:defaultValue=".tile"/>
+        
+    </PreferenceScreen>
+   
+		
+</PreferenceScreen>
